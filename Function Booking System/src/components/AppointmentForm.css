@@ -1,0 +1,171 @@
+/* Appointment Form Styles */
+.appointment-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* No animation for the container itself */
+}
+
+/* Animation for elements inside the form */
+.appointment-form h1,
+.appointment-form label,
+.appointment-form input,
+.appointment-form button {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Shifted downwards */
+  animation: fadeInElement 0.8s ease forwards;
+}
+
+/* Staggered animation delays */
+.appointment-form h1 {
+  animation-delay: 0.2s; /* Header appears first */
+}
+
+.appointment-form label:nth-of-type(1),
+.appointment-form input:nth-of-type(1) {
+  animation-delay: 0.4s; /* First input field */
+}
+
+.appointment-form label:nth-of-type(2),
+.appointment-form input:nth-of-type(2) {
+  animation-delay: 0.6s; /* Second input field */
+}
+
+.appointment-form label:nth-of-type(3),
+.appointment-form input:nth-of-type(3) {
+  animation-delay: 0.8s; /* Third input field */
+}
+
+.appointment-form label:nth-of-type(4),
+.appointment-form input:nth-of-type(4) {
+  animation-delay: 1s; /* Fourth input field */
+}
+
+.appointment-form label:nth-of-type(5),
+.appointment-form input:nth-of-type(5) {
+  animation-delay: 1.2s; /* Fifth input field */
+}
+
+.appointment-form button {
+  animation-delay: 1.4s; /* Button appears last */
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeInElement {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start from slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Form Header */
+.appointment-form h1 {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  color: #fcfcfc; /* Emerald Green */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Layout */
+.appointment-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.appointment-form label {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #1a1919;
+}
+
+/* Input Fields and Datepicker */
+.appointment-form input {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #333;
+  outline: none;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.appointment-form input:focus
+ {
+  border: 2px solid #004d40;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+.react-datepicker-wrapper {
+  width: 100%;  /* Full width */
+}
+.react-datepicker__input-container input {
+  
+  transition: all 0.3 s ease-in-out;
+}
+
+
+/* Submit Button */
+.appointment-form button {
+  background: linear-gradient(135deg, #004d40, #ffc0cb); /* Emerald Green to Rose Gold */
+  color: white;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.appointment-form button:hover {
+  background: linear-gradient(135deg, #ffc0cb, #004d40);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.appointment-form button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #ffc0cb;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.appointment-form button:hover::before {
+  transform: translateY(0%);
+}
+
+/* Subtle glow on form focus */
+.appointment-form input:focus,
+.appointment-form button:focus {
+  box-shadow: 0 10px 20px rgba(0, 128, 128, 0.3); /* Subtle glow on focus */
+}
+
+
+

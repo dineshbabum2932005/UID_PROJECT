@@ -1,0 +1,133 @@
+/* Existing styles remain unchanged */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Enhanced gradient for depth */
+}
+
+.event-details {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Consistent theme */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+  animation: bottomUp 1.2s ease-in-out; /* Bottom-up animation added */
+}
+
+.event-details h2 {
+  font-family: "Playfair Display", sans-serif; /* Primary and fallback fonts */
+  font-size: 45px; /* Size of the title */
+  font-weight: 700; /* Bold weight for emphasis */
+  font-style: normal; /* Normal style */
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.event-details p {
+  font-size: 38px;
+  font-family: "Nerko One", cursive;
+  color: #abd2e5;
+  margin-bottom: 40px;
+}
+
+.appointment-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.appointment-button:hover {
+  background-color: #0056b3;
+}
+
+.event-image {
+  width: 100%;
+  height: 400px;
+  max-width: 800px; /* Restrict the image width */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, filter 0.4s ease;
+
+  margin: 20px 0; /* Adds space around the image */
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Description Styling */
+.event-description {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.appointment-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffb400;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: 0px 6px 20px rgba(243, 156, 18, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.appointment-button:hover {
+  background-color: #d35400;
+  box-shadow: 0px 8px 25px rgba(243, 156, 18, 0.5);
+}
+
+/* Animation for smooth page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* New Bottom-Up Animation */
+@keyframes bottomUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Start from lower position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 28px;
+  }
+
+  .event-content {
+    font-size: 16px;
+  }
+
+  .event-description {
+    font-size: 14px;
+  }
+
+  .appointment-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

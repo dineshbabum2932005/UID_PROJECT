@@ -1,0 +1,135 @@
+/* Compact Premium Navbar Styling */
+* {
+  text-decoration: none;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0a1f3c, #1a2d6f); /* Deep navy to steel blue gradient */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Sticky Navbar */
+.navbar.sticky {
+  background: linear-gradient(90deg, #1b2a44, #2c3e50); /* Dark slate to lighter steel blue */
+  padding: 8px 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo Styling */
+.nav-logo {
+  color: #f0f0f0; /* Off-white */
+  font-family: "Nerko One", cursive;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #f8c300; /* Gold */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links a {
+  color: #f0f0f0; /* Off-white */
+  font-size: 14px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  position: relative;
+  display: block;
+}
+
+/* Hover and Active Effects */
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8c300; /* Gold */
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #f8c300; /* Gold underline animation */
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Button Styling (Login Button) */
+.nav-login {
+  background-color: #f8c300; /* Gold */
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(248, 195, 0, 0.3);
+}
+
+.nav-login:hover {
+  background-color: #f1c40f; /* Dark gold */
+  box-shadow: 0px 6px 20px rgba(248, 195, 0, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-login {
+    margin-top: 8px;
+  }
+}
+
+/* Smooth Scroll for Navigation */
+html {
+  scroll-behavior: smooth;
+}

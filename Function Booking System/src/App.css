@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* Home Page Styles */
+.home {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+}
+
+.event-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Event Details Styles */
+.event-details {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.event-details h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.event-details p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.appointment-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.appointment-button:hover {
+  background-color: #218838;
+}
+
+/* Appointment Form Styles */
+.appointment-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.appointment-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.appointment-form input,
+.appointment-form .react-datepicker-wrapper {
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.appointment-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.appointment-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Success Message Styles */
+.success-message {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.success-message h1 {
+  color: #28a745;
+  font-size: 28px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .event-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-card {
+    width: 80%;
+  }
+}

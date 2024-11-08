@@ -1,0 +1,83 @@
+/* Admin Page Styles */
+.admin-page {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Enhanced gradient for depth */
+  color: #fcfcfc; /* Text color for contrast */
+  font-family: 'Arial', sans-serif; /* Font for readability */
+}
+
+/* Header Styles */
+.admin-page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Subheader Styles */
+.admin-page h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Appointment List Styles */
+.admin-page ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Full width */
+  max-width: 600px; /* Limit max width for better layout */
+}
+
+/* Individual Appointment Item Styles */
+.admin-page li {
+  background: rgba(255, 255, 255, 0.15); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+/* Hover Effect for Appointment Items */
+.admin-page li:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Strong Element Styles */
+.admin-page strong {
+  color: #ffc0cb; /* Highlighted text color for strong elements */
+}
+/* Verify Button Styles */
+.admin-page button {
+  background-color: #4caf50; /* Green background */
+  border: none; /* Remove default border */
+  color: white; /* White text */
+  padding: 12px 20px; /* Spacing for the button */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline element */
+  font-size: 16px; /* Font size */
+  margin: 10px 2px; /* Margin for spacing */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+}
+
+/* Hover Effect for Verify Button */
+.admin-page button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Focus Effect for Verify Button */
+.admin-page button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px 2px #4caf50; /* Green shadow on focus */
+}
